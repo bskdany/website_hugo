@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://bskdany.com/</loc>
-    <lastmod>2023-06-21T22:51:23-04:00</lastmod>
+    <loc>https://bskdany.com/posts/abusing-bluetooth-speakers/</loc>
+    <lastmod>2023-06-22T02:41:32-04:00</lastmod>
   </url><url>
-    <loc>https://bskdany.com/posts/my-first-post/</loc>
-    <lastmod>2023-06-21T22:51:23-04:00</lastmod>
+    <loc>https://bskdany.com/</loc>
+    <lastmod>2023-06-22T02:41:32-04:00</lastmod>
   </url><url>
     <loc>https://bskdany.com/posts/</loc>
+    <lastmod>2023-06-22T02:41:32-04:00</lastmod>
+  </url><url>
+    <loc>https://bskdany.com/posts/initial-commit/</loc>
     <lastmod>2023-06-21T22:51:23-04:00</lastmod>
   </url><url>
     <loc>https://bskdany.com/categories/</loc>

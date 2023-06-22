@@ -6,13 +6,23 @@
     <description>Recent content on Bskdanys blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 21 Jun 2023 22:51:23 -0400</lastBuildDate><atom:link href="https://bskdany.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Jun 2023 02:41:32 -0400</lastBuildDate><atom:link href="https://bskdany.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>First Commit</title>
-      <link>https://bskdany.com/posts/my-first-post/</link>
+      <title>Abusing Bluetooth Speakers</title>
+      <link>https://bskdany.com/posts/abusing-bluetooth-speakers/</link>
+      <pubDate>Thu, 22 Jun 2023 02:41:32 -0400</pubDate>
+      
+      <guid>https://bskdany.com/posts/abusing-bluetooth-speakers/</guid>
+      <description>One day in April 2022 I noticed how a speaker used by a restaurant close by had the pairing mode always on, I obviously found it fun to connect to it every time I was close by and play Scotland Forever at max volume, making the waiters run around confused&amp;hellip;
+Anyways, that made me wonder, how many more of those speakers can be found? I already had a plan in mind, an android app that automatically scans, pairs, connects and plays loud music on whatever it can connect to.</description>
+    </item>
+    
+    <item>
+      <title>Initial Commit</title>
+      <link>https://bskdany.com/posts/initial-commit/</link>
       <pubDate>Wed, 21 Jun 2023 22:51:23 -0400</pubDate>
       
-      <guid>https://bskdany.com/posts/my-first-post/</guid>
+      <guid>https://bskdany.com/posts/initial-commit/</guid>
       <description>I hope this thing is working, I have never done anything like this before but hey, what better way of showing the stuff you&amp;rsquo;re doing than a blog on the internet that no one will probably find or read.
 Maybe it&amp;rsquo;s going to be a sort of therapeutical writing about what is happening in my projects so that I can organize my mind better, rubber ducky sort of thing.
 I have no expectations on this so at this point why not?</description>

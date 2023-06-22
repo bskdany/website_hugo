@@ -1,5 +1,5 @@
 ---
-title: "First Commit"
+title: "Initial Commit"
 date: 2023-06-21T22:51:23-04:00
 ---
 
