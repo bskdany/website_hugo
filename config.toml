@@ -1,5 +1,5 @@
 title = "Bskdanys blog"
-baseURL = 'https://hba.sid.one/'
+baseURL = 'https://bskdany.com/'
 publishDir = "docs"
 
 # This is what goes in <html lang="">
@@ -53,14 +53,14 @@ disqusShortname = ''
     weight = 30
 
 [params]
-  sitename = "Awesome hugo blog"
+  sitename = "Bskdanys blog"
   defaultColor = "dark" # set color mode: dark, light, auto
   # Setting it to 'auto' applies the color scheme based on the visitor's device color preference.If you don't specify anything, ignore this parameter, or leave it blank,
   # the default value is set to 'auto'.
   # You can take a look at layouts/index.html for more information.
-  description = "Minimal Hugo blog theme with light and dark mode support"
+  description = "A place where I can show off my stuff and rant about my failures"
   mainSections = ['posts']
-  toc = true # set to false to disable table of contents 'globally'
+  toc = false # set to false to disable table of contents 'globally'
   goToTop = true # set to false to disable 'go to top' button
   additionalScripts = ['js/custom.js', 'js/custom-2.js']
   # Will try to load 'assets/js/custom.js' and 'assets/js/custom-2.js'.
@@ -70,11 +70,11 @@ disqusShortname = ''
   
   
 [params.author]
-  avatar = "pfp.jpeg" # put the file in assets folder; also ensure that image has same height and width
+  avatar = "pfp.jpg" # put the file in assets folder; also ensure that image has same height and width
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
   intro = "Awesome hugo blog"
   name = "bskdany"
-  description = "My attempt of running a personal blog"
+  description = "Developer of anything that I feel like would be useful, I might fix your pc too!"
 
 # Allow to override webmanifest options
 [params.webmanifest]
