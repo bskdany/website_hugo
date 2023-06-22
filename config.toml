@@ -1,5 +1,6 @@
 title = "Bskdanys blog"
 baseURL = 'https://hba.sid.one/'
+publishDir = "docs"
 
 # This is what goes in <html lang="">
 languageCode = 'en-us'
