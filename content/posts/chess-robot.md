@@ -1,7 +1,6 @@
 ---
 title: "Chess Robot"
 date: 2023-07-27T00:23:00-04:00
-draft: false
 ---
 
 Christmas break just started, 2021 was about to end and instead of going to ski I had to stay home because my brother passed me Covid, it would be a shame if a friend of mine starts begging me to help him write the code for his robotics graduation project that was due two weeks prior.
