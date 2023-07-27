@@ -3,11 +3,11 @@
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title itemprop="name">Bskdanys blog | Bskdanys blog</title>
-<meta property="og:title" content="Bskdanys blog | Bskdanys blog" />
-<meta name="twitter:title" content="Bskdanys blog | Bskdanys blog" />
-<meta itemprop="name" content="Bskdanys blog | Bskdanys blog" />
-<meta name="application-name" content="Bskdanys blog | Bskdanys blog" />
+<title itemprop="name">Chess Robot | Bskdanys blog</title>
+<meta property="og:title" content="Chess Robot | Bskdanys blog" />
+<meta name="twitter:title" content="Chess Robot | Bskdanys blog" />
+<meta itemprop="name" content="Chess Robot | Bskdanys blog" />
+<meta name="application-name" content="Chess Robot | Bskdanys blog" />
 <meta property="og:site_name" content="Bskdanys blog" />
 
 <meta name="description" content="A place where I can show off my stuff and rant about my failures">
@@ -28,14 +28,50 @@
 
 
 
+    
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2023-07-27T00:23:00-0400 />
+    <meta property="article:published_time" content=2023-07-27T00:23:00-0400 />
+
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Chess Robot",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2023-07-27",
+        "description": "",
+        "wordCount":  1004 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2023-07-27",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": "Bskdanys blog"
+        }
+    }
+    </script>
+
 
 <meta name="generator" content="Hugo 0.114.0">
 
     
 
-    <link rel="canonical" href="https://bskdany.com/">
-    <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Bskdanys blog">
-    <link href="/index.xml" rel="feed" type="application/rss+xml" title="Bskdanys blog">
+    <link rel="canonical" href="https://bskdany.com/posts/chess-robot/">
     <link href="/style.min.d16f523c36741e07697791cfe4bcb09b8c92c7034d5cbf85980df65d92a70e97.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
@@ -60,7 +96,7 @@
 
     
     </head>
-<body data-theme="dark" class="notransition">
+<body data-theme = "dark" class="notransition">
 
 <script src="/js/theme.min.8961c317c5b88b953fe27525839672c9343f1058ab044696ca225656c8ba2ab0.js" integrity="sha256-iWHDF8W4i5U/4nUlg5ZyyTQ/EFirBEaWyiJWVsi6KrA="></script>
 
@@ -94,7 +130,7 @@ stroke-linejoin="round" class="feather feather-home">
                 </li>
                 
                 <li>
-                    <a class="menu-link " href="/posts/">
+                    <a class="menu-link active" href="/posts/">
                         Posts
                     </a>
                     
@@ -120,65 +156,56 @@ stroke-linejoin="round" class="feather feather-home">
         </div>
     </nav>
 </div>
-<div class="wrapper">
-        
 
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">Chess Robot</h1>
+                
+                <div class="post-meta">
+                    <time datetime="2023-07-27T00:23:00-04:00" itemprop="datePublished"> 27 Jul 2023 </time>
+                </div>
+            </header><div class="page-content">
+                <p>Christmas break just started, 2021 was about to end and instead of going to ski I had to stay home because my brother passed me Covid, it would be a shame if a friend of mine starts begging me to help him write the code for his robotics graduation project that was due two weeks prior.</p>
+<p>Robot that plays chess, great project to choose if you are a complete beginner to everything. Well, not that he can change it after he built the whole thing and told the profs that it&rsquo;s almost done.
+Anyways here we go, this is what I had to work with:</p>
+<p><img src="/chess_robot.jpeg" alt="&ldquo;chess robot&rdquo;"></p>
+<p>A wooden box with a 2-axis system that moves an electromagnet. The movement is controlled by 2 motors and rubber belts, the motor on the Y axis moves the X axis up and down, the motor on the X axis moves the electromagnet left and right. Push sensors are added at the end of each axis to detect when the magnet reaches the end of the rod so that the motor knows when to stop.</p>
+<p>The idea is that the chess pieces can be picked up by electromagnet under the chessboard and then be moved around, voila, chess robot.</p>
+<p>This approach restricts it&rsquo;s capabilities, all the robot could do is pick up a chess piece from one place and get it in another place. No player vs computer, no removal from the chess piece from the board and no special moves like pawn promotion or castling.</p>
+<p>I never did anything with Arduino before but I figured that all I needed was basic C and the code to control basic functions, from then it&rsquo;s logic.</p>
+<p>I started by making functions to control the motors and the sensors, a function to turn on the electromagnet, a function to turn off the electromagnet, a function to move x axis magnet and a function to move the y axis magnet, very basic.</p>
+<p>The problem that arises is that the motors can&rsquo;t just move from point A to point B, they turn on and they move until I turn them off, so what I need is to transform time into distance. What I did is record the time it takes the motors to move from one end to the other and then use that time as a measuring unit.</p>
+<p>To do that I create a function named Calibrate_X, it activates the X axis motor and it makes the magnet move until it touches the sensor at the other end of the axis. A difference in time between the end of the start is saved and then divided by 1000, an arbitrary number used for convenience.
+So for example, if the magnet takes 5000 milliseconds to travel then it takes 5 milliseconds for 1 point and 625 milliseconds for a chess square (5000/8).
+The whole calibration process is repeated for the Y axis.</p>
+<p>Now I need a way to move the pieces around without them bumping into each other, to achieve that I first move them in between the squares, then to the destination and finally back in the middle of the square, like this:</p>
+<p><img src="/chess_path1.jpeg" alt="&ldquo;chess_path_1&rdquo;"></p>
+<p>So let&rsquo;s imagine a 1000x1000 plane in the first quadrant of the XY plane, because of the thing discussed prior all the movements will be multiples of half a square and so each of them will be 1000 / 16 = 62.5 points.</p>
+<p>Next I create a function to translate the chessboard square notation to XY axis coordinates by putting the input in the serial monitor. The square A1 will translate to X = 62.5 and Y = 62.5, the square G7 will translate to X = 62.5 * 7 and Y = 62.5 * 7 and so on.</p>
+<p>What is left is a function to handle the movement of the motor and a function to handle the path that the magnet is going to take. The path function gets the beginning and the end coordinates and calculates the shortest path to move the chess piece to its destination while avoiding the other chess pieces, it then divides the path into coordinates and gives them to the movement function that moves the chess piece.</p>
+<p>Those are all the needed functions, they can be combined to make the whole program, this is how a complete execution would work:
+<img src="/chess_path2.jpeg" alt="&ldquo;chess_path_1&rdquo;"></p>
+<ol>
+<li>As the Arduino is turned on the calibration function gets the time it takes a motor to go from the beginning to the end for both X and Y axis.</li>
+<li>The user is asked the beginning and the end coordinates in the serial monitor.</li>
+<li>The beginning chessboard coordinates are converted to XY coordinates.</li>
+<li>The path function is given the coordinate (0,0) as a start coordinate and the converted XY coordinate as the destination. It then calculates how to move the electromagnet, first it matches the X axis and then the Y axis.</li>
+<li>The electromagnet is now under the chess piece, so we call the function to activate it.</li>
+<li>The end chessboard coordinates are converted to XY coordinates.</li>
+<li>The path function is given the converted beginning coordinate as start and the converted end coordinate as the destination. It then calculates how to move the chess piece, first the chess piece if moved in between the two squares, then it is moved to the Y coordinate of the destination, then it is moved to the X coordinate of the destination and finally it&rsquo;s moved back in the middle of the square.</li>
+<li>The electromagnet gets deactivated, the chess piece gets left on the destination square and then the path function moves the magnet back to coordinates (0,0)</li>
+<li>The user is asked the beginning and the end coordinates in the serial monitor.</li>
+</ol>
+<p>The source code and a video of the complete project can be found <a href="https://github.com/bskdany/ChessMagnetRobot">on my github</a>.</p>
+<p>My friend promised me free alcohol for this and of course I never had anything back.</p>
+<p>And that&rsquo;s how you make a chess robot in 3 days in a language you never coded with during Christmas while having Covid.</p>
 
-<div class="author">
-    
-    
-    <img class="author-avatar" src="/pfp_hubffabac8b2075611960d6759d64c1f5a_635229_100x100_fill_q75_h2_box_smart1.webp" alt="bskdany" width="1536"
-        height="1536" />
-    
-    <h2 class="author-name">bskdany</h2>
-    <p class="author-bio">Developer of anything that I feel like would be useful, crazy nerd doesn&#39;t even scratch the surface</p>
+            </div>
+        </article></main>
 </div>
-
-        <main aria-label="Content">
-            <h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
-            
-            
-            
-            
-            <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="/posts/chess-robot/">Chess Robot</a>
-    </h4>
-    
-    
-    <time class="post-item-meta" datetime="2023-07-27T00:23:00-0400">
-        27 Jul 2023
-    </time>
-</article>
-
-            
-            <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="/posts/abusing-bluetooth-speakers/">Abusing Bluetooth Speakers</a>
-    </h4>
-    
-    
-    <time class="post-item-meta" datetime="2023-06-22T02:41:32-0400">
-        22 Jun 2023
-    </time>
-</article>
-
-            
-            <article class="post-item">
-    <h4 class="post-item-title">
-        <a href="/posts/initial-commit/">Initial Commit</a>
-    </h4>
-    
-    
-    <time class="post-item-meta" datetime="2023-06-21T22:51:23-0400">
-        21 Jun 2023
-    </time>
-</article>
-
-            
-            
-        </main>
-    </div><footer class="footer">
+<footer class="footer">
     <span class="footer_item"> </span>
     &nbsp;
 
@@ -245,5 +272,4 @@ stroke-linejoin="round" class="feather feather-home">
     
 
 </body>
-
 </html>

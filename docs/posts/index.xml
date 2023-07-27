@@ -6,7 +6,17 @@
     <description>Recent content in Posts on Bskdanys blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Jun 2023 02:41:32 -0400</lastBuildDate><atom:link href="https://bskdany.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 27 Jul 2023 00:23:00 -0400</lastBuildDate><atom:link href="https://bskdany.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chess Robot</title>
+      <link>https://bskdany.com/posts/chess-robot/</link>
+      <pubDate>Thu, 27 Jul 2023 00:23:00 -0400</pubDate>
+      
+      <guid>https://bskdany.com/posts/chess-robot/</guid>
+      <description>Christmas break just started, 2021 was about to end and instead of going to ski I had to stay home because my brother passed me Covid, it would be a shame if a friend of mine starts begging me to help him write the code for his robotics graduation project that was due two weeks prior.
+Robot that plays chess, great project to choose if you are a complete beginner to everything.</description>
+    </item>
+    
     <item>
       <title>Abusing Bluetooth Speakers</title>
       <link>https://bskdany.com/posts/abusing-bluetooth-speakers/</link>
