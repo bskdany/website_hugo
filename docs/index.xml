@@ -8,6 +8,18 @@
     <language>en-us</language>
     <lastBuildDate>Thu, 27 Jul 2023 00:23:00 -0400</lastBuildDate><atom:link href="https://bskdany.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Whoami</title>
+      <link>https://bskdany.com/whoami/</link>
+      <pubDate>Thu, 27 Jul 2023 08:32:50 -0400</pubDate>
+      
+      <guid>https://bskdany.com/whoami/</guid>
+      <description>Hey!
+I&amp;rsquo;m just a guy that somehow got involved with computers and everything that has to do with them.
+Right now I&amp;rsquo;m experimenting with random stuff trying to find what I like, in the past two years I did an android app, a game in unity, web scrapers, trading bots with the lean engine, websites, a chess robot, setup servers etc
+At this moment I mainly code in python but I have knowledge of Javascript, Java, C# and Arduino C.</description>
+    </item>
+    
+    <item>
       <title>Chess Robot</title>
       <link>https://bskdany.com/posts/chess-robot/</link>
       <pubDate>Thu, 27 Jul 2023 00:23:00 -0400</pubDate>

@@ -48,8 +48,8 @@ disqusShortname = ''
     weight = 20
   [[menu.main]]
     pageRef="about"
-    name = 'About'
-    url = '/about/'
+    name = 'Whoami'
+    url = '/whoami/'
     weight = 30
 
 [params]
