@@ -10,6 +10,6 @@ I'm just a guy that somehow got involved with computers and everything that has 
 
 Right now I'm experimenting with random stuff trying to find what I like, in the past two years I did an android app, a game in unity, web scrapers, trading bots with the lean engine, websites, a chess robot, setup servers etc
 
-At this moment I mainly code in python but I have knowledge of Javascript, Java, C# and Arduino C.
+At this moment I mainly code in Python but I have knowledge of C, C++, Java, Kotlin and Javascript.
 
 If you want to have a more detailed look of the stuff I do you contact me [here](mailto:business@bskdany.com)
