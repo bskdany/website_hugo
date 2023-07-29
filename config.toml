@@ -74,6 +74,7 @@ disqusShortname = ''
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
   intro = "bskdany"
   name = "bskdany"
+  background = "background.jpg"
   description = "Developer of anything that I feel like would be useful, crazy nerd doesn't even scratch the surface"
 
 # Allow to override webmanifest options
